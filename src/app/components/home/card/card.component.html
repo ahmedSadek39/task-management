@@ -1,0 +1,25 @@
+<div class="container">
+  @for (card of cards; track $index) {
+  <div class="card">
+    <div class="first-part">
+      <div class="svg">
+        <app-svg-icon
+          [src]="assetsPath + 'svgs/' + card.svgFileName + '.svg'"
+        />
+      </div>
+      <div class="title">{{ card.title }}</div>
+      <div class="count">{{ card.tasksCount }}</div>
+    </div>
+    <div class="second-part">
+      <div class="chart">
+        <app-svg-chart [color]="card.color" />
+      </div>
+      <div class="details">
+        <span>{{ card.tasksDone }}+</span>
+        <span> more</span><br />
+        <span>from last week</span>
+      </div>
+    </div>
+  </div>
+  }
+</div>

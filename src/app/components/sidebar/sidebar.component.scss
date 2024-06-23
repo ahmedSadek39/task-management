@@ -1,0 +1,26 @@
+.icons-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  > div {
+    &:first-child {
+      height: 59px;
+    }
+
+    &:not(:first-child) {
+      height: 69px;
+      width: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

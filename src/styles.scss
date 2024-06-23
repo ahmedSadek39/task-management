@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --body-font: "DM Sans", sans-serif;
+
+  --sidebar-width: 94px;
+  --navbar-height: 76px;
+  --scheudle-width: 396px;
+  --bg-color-light: #f3f4f8;
+  --bg-color-inputs: #f3f7fa;
+
+  --dark-color: #232360;
+  --main-color: #5051f9;
+  --secondery-color: #23b2ff;
+  --third-color: #1ea7ff;
+
+  --color-white: #ffffff;
+  --bg-color-secondery: #e8edf1;
+  --color-titles: #8c97a8;
+
+  --z-index-default: 1000;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 2rem;
+    --smaller-font-size: 0.875rem;
+    --normal-font-size: 1rem;
+    --big-font-size: 3.5rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--secondary-color);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}

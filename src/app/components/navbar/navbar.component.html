@@ -1,0 +1,21 @@
+<header>
+  <div class="search-container">
+    <input type="text" placeholder="Search anything..." />
+    <div class="search-icon">
+      <app-svg-icon [src]="assetsPath + 'svgs/search.svg'" />
+    </div>
+  </div>
+  <div class="profile-setting">
+    <div class="notify">
+      <app-svg-icon [src]="assetsPath + 'svgs/notify.svg'" />
+    </div>
+    <div class="user-action">
+      <div class="image">
+        <img [src]="assetsPath + 'images/profile.jpeg'" alt="profile" />
+      </div>
+      <div class="arrow">
+        <app-svg-icon [src]="assetsPath + 'svgs/arrow-bottom.svg'" />
+      </div>
+    </div>
+  </div>
+</header>

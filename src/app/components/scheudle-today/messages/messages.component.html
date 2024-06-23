@@ -1,0 +1,18 @@
+<div class="messages">
+  <div class="title">Messages</div>
+  @for (message of messages; track $index) {
+  <div class="message">
+    <div class="image" [style]="'--border-color:' + message.color">
+      <img
+        [src]="assetsPath + 'images/persons/' + message.srcImage + '.jpeg'"
+        [alt]="message.srcImage"
+        loading="lazy"
+      />
+    </div>
+    <div class="content">
+      <span>{{ message.senderName }}</span>
+      <div>{{ message.content }}</div>
+    </div>
+  </div>
+  }
+</div>

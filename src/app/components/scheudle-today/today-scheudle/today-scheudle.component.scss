@@ -1,0 +1,134 @@
+#today-scheudle {
+  width: 314px;
+  height: 206px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+}
+
+#today-scheudle-header {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    height: 26px;
+    font-family: var(--body-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.04px;
+    color: var(--dark-color);
+  }
+
+  .icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 78px;
+    height: 29px;
+    border-radius: 14.5px;
+    background-color: #f4f4f4;
+  }
+}
+
+#calling-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 49px;
+  .title {
+    height: 16px;
+    font-family: var(--body-font);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.62px;
+    color: var(--third-color);
+  }
+  .header {
+    height: 23px;
+    color: var(--dark-color);
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.44px;
+    text-align: left;
+  }
+  .invite {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16.93px;
+    color: var(--third-color);
+    cursor: pointer;
+  }
+}
+
+#calling-details {
+  width: 314px;
+  height: 68px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 8px 20px 0px rgba(80, 81, 249, 0.24);
+  // margin-bottom: 30px;
+  .image-container {
+    div {
+      display: inline-block;
+      overflow: hidden;
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--color-white);
+      text-align: center;
+      margin-left: -8px;
+      img,
+      span {
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        object-fit: cover;
+      }
+      span {
+        display: inline-block;
+        color: var(--third-color);
+        background-color: #e9f1fc;
+        font-family: var(--body-font);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 23.83px;
+      }
+    }
+  }
+
+  .timer {
+    height: 21px;
+    font-family: var(--body-font);
+    font-weight: 500;
+    line-height: 20.83px;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 44px;
+    color: var(--color-white);
+  }
+}
+
+::ng-deep {
+  .icons svg {
+    cursor: pointer;
+  }
+}

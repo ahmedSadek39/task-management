@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  padding: 30px 40px;
+  gap: 0 24px;
+
+  .card {
+    padding: 20px;
+    width: 274px;
+    height: 210px;
+    border-radius: 16px;
+    background-color: var(--color-white);
+
+    .first-part {
+      padding-bottom: 30px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 233px;
+        height: 1px;
+        background-color: var(--bg-color-secondery);
+        top: 62px;
+      }
+    }
+
+    .second-part {
+      padding-top: 30px;
+
+      .chart {
+        width: 115px;
+        margin-left: -5px;
+      }
+      .details {
+        text-align: right;
+        margin-left: auto;
+        span {
+          font-family: var(--body-font);
+          height: 21px;
+          line-height: 20.83px;
+          &:first-child {
+            font-weight: 700;
+            color: green;
+          }
+          &:nth-child(2) {
+            font-weight: 500;
+            color: var(--color-titles);
+          }
+          &:nth-child(4) {
+            font-weight: 500;
+            color: var(--color-titles);
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background-color: #f3f7fd;
+      padding-top: 4px;
+      border-radius: 50%;
+    }
+
+    .title {
+      font-family: var(--body-font);
+      color: var(--color-titles);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20.83px;
+      text-align: left;
+      height: 21px;
+      margin-left: 12px;
+    }
+
+    .count {
+      font-family: DM Sans;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 28.64px;
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 24px;
+    padding: 30px 40px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

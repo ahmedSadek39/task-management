@@ -1,0 +1,42 @@
+<div id="today-scheudle">
+  <div id="today-scheudle-header">
+    <div class="title">Today’s Scheudle</div>
+    <div class="icons-container">
+      <app-svg-icon [src]="assetsPath + 'svgs/four-squares.svg'" />
+      <app-svg-icon [src]="assetsPath + 'svgs/calendar.svg'" />
+    </div>
+  </div>
+
+  <div id="calling-header">
+    <div class="title">30 minute call with Client</div>
+    <div class="header">Project Discovery Call</div>
+    <span class="invite">+ Invite</span>
+  </div>
+
+  <div id="calling-details">
+    <div class="image-container">
+      @for (person of persons; track $index) {
+      <div>
+        @if(person.srcImage){
+        <img
+          [src]="assetsPath + 'images/persons/' + person.srcImage + '.jpeg'"
+          [alt]="person.name"
+          loading="lazy"
+        />
+        } @else{
+        <span>{{ person.name[0] }}</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="timer">28:35</div>
+    <div class="icons">
+      <div>
+        <app-svg-icon [src]="assetsPath + 'svgs/call.svg'" />
+      </div>
+      <div>
+        <app-svg-icon [src]="assetsPath+'svgs/dots-v.svg'" />
+      </div>
+    </div>
+  </div>
+</div>

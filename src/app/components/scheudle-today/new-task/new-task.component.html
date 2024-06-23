@@ -1,0 +1,38 @@
+<div id="new-task">
+  <div class="title-header">
+    <div class="title">New Task</div>
+    <div>
+      <app-svg-icon [src]="assetsPath + 'svgs/dots.svg'" />
+    </div>
+  </div>
+  <div class="label">Task Title</div>
+  <input type="text" value="Create New" />
+  <div class="emotions">
+    <div class="left-arrow">&#60;</div>
+    <div class="emo-container">
+      @for (emotion of emotions; track $index) {
+      <span>{{ emotion }}</span>
+      }
+    </div>
+    <div class="right-arrow">&#62;</div>
+  </div>
+  <div class="line"></div>
+  <div id="collaborators">
+    <div class="title">Add Collaborators</div>
+    <div class="collaborators-container">
+      @for (collaborator of collaborators; track $index) {
+      <div class="collaborator-div" [style.color]="collaborator.color">
+        <img
+          [src]="assetsPath + 'images/persons/' + collaborator.srcImage + '.jpeg'"
+          [alt]="collaborator.srcImage"
+          loading="lazy"
+        />
+        <span class="name">{{ collaborator.name }}</span>
+        <span class="remove">&#215;</span>
+      </div>
+      }
+      <div class="plus">+</div>
+      <div class="move">&#62;</div>
+    </div>
+  </div>
+</div>

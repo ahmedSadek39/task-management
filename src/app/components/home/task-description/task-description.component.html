@@ -1,0 +1,53 @@
+<div class="title">Task</div>
+<div class="task-container">
+  @for (task of tasks; track $index) {
+  <div class="task">
+    <div class="task-start">
+      <div class="icon"></div>
+      <div class="time">
+        <span class="start-from">Start from</span>
+        <span class="clock">
+          <span class="clock-icon">
+            <app-svg-icon [src]="assetsPath + 'svgs/clock.svg'" />
+          </span>
+          <span class="digit">{{ task.timeStart }}</span>
+        </span>
+      </div>
+    </div>
+    <!-- <div class="task-body"> -->
+    <div class="search-inspiration">
+      <div class="search-inspiration-title">Search Inspiration for project</div>
+      <div class="link-comment">
+        <div class="link">
+          <app-svg-icon [src]="assetsPath + 'svgs/link.svg'" />
+          <span>{{ task.link }}</span>
+        </div>
+        <div class="break"></div>
+        <app-svg-icon [src]="assetsPath + 'svgs/comment.svg'" />
+        <div class="comment">
+          <span>{{ task.numberOfComments }} comments</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-div">
+      <div class="value">{{ task.progressPercentage }}% complete</div>
+      <div class="rr">
+        <div
+          class="range"
+          [style]="'--size:' + task.progressPercentage + '%'"
+          [style.backgroundColor]="task.color"
+        ></div>
+      </div>
+    </div>
+
+    <div class="reminder-container">
+      <div class="reminder">
+        <app-svg-icon [src]="assetsPath + 'svgs/reminder.svg'" />
+        <span>Reminder</span>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  }
+</div>
